@@ -1,0 +1,16 @@
+Column,Data_Type,Non_Null_Count,Missing_Count,Missing_%,Unique_Values
+Country_Name,object,933,0,0.0,61
+Country_Code,object,933,0,0.0,61
+Time,float64,933,0,0.0,16
+Time_Code,object,933,0,0.0,16
+Access_to_Clean_Fuels_and_Technologies_for_cooking_percent_of_total_population_[2.1_ACCESS.CFT.TOT],float64,933,0,0.0,710
+Access_to_electricity_percent_of_rural_population_with_access_[1.2_ACCESS.ELECTRICITY.RURAL],float64,933,0,0.0,616
+Access_to_electricity_percent_of_total_population_[1.1_ACCESS.ELECTRICITY.TOT],float64,933,0,0.0,628
+Access_to_electricity_percent_of_urban_population_with_access_[1.3_ACCESS.ELECTRICITY.URBAN],float64,933,0,0.0,614
+Energy_intensity_level_of_primary_energy_MJ/2011_USD_PPP_[6.1_PRIMARY.ENERGY.INTENSITY],float64,933,0,0.0,915
+Renewable_electricity_output_GWh_[4.1.2_REN.ELECTRICITY.OUTPUT],float64,933,0,0.0,685
+Renewable_electricity_share_of_total_electricity_output_percent_[4.1_SHARE.RE.IN.ELECTRICITY],float64,933,0,0.0,774
+Renewable_energy_consumption_TJ_[3.1_RE.CONSUMPTION],float64,933,0,0.0,876
+Renewable_energy_share_of_TFEC_percent_[2.1_SHARE.TOTAL.RE.IN.TFEC],float64,933,0,0.0,880
+Total_electricity_output_GWh_[4.1.1_TOTAL.ELECTRICITY.OUTPUT],float64,933,0,0.0,875
+Total_final_energy_consumption_TFEC_TJ_[1.1_TOTAL.FINAL.ENERGY.CONSUM],float64,933,0,0.0,912
