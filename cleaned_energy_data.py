@@ -23,7 +23,7 @@ df.columns = (
 if "Time" in df.columns:
     df["Time"] = pd.to_numeric(df["Time"], errors="coerce")
 
-# Convert numeric columns properly
+
 numeric_cols = df.select_dtypes(include=["object"]).columns
 for col in numeric_cols:
     df[col] = pd.to_numeric(df[col], errors="ignore")
@@ -39,4 +39,5 @@ df.fillna(df.select_dtypes(include=np.number).mean(), inplace=True)
 
 print("\nMissing Values After Handling:")
 print(df.isnull().sum())
+
 
