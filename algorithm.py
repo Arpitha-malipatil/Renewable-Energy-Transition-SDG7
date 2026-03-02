@@ -15,6 +15,8 @@ def run_linear_regression(csv_path: str):
     Returns:
         model: Trained Linear Regression model
         r2 (float): R-squared score on test data
+        predictions (array): Predicted values for test data
+        y_test (array): Actual values from test data
     """
 
     # 1️⃣ Load dataset
@@ -50,10 +52,12 @@ def run_linear_regression(csv_path: str):
     # 8️⃣ Evaluate
     r2 = r2_score(y_test, predictions)
 
-    return model, r2
+    return model, r2, predictions, y_test
 
 
 # Run directly
 if __name__ == "__main__":
-    model, score = run_linear_regression("preprocessed_energy_data.csv")
+    model, score, preds, actuals = run_linear_regression("preprocessed_energy_data.csv")
     print("R2 Score:", round(score, 4))
+    print("\nPredicted Values:\n", preds)
+    print("\nActual Values:\n", actuals.values)
