@@ -21,7 +21,7 @@ def run_linear_regression(csv_path: str):
 
     # Load dataset
     data = pd.read_csv(csv_path)
-
+    #Droping all the missing data set values and cleaning 
     # Drop missing values
     data = data.dropna()
 
