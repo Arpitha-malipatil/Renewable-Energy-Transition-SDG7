@@ -19,37 +19,37 @@ def run_linear_regression(csv_path: str):
         y_test (array): Actual values from test data
     """
 
-    # 1️⃣ Load dataset
+    # Load dataset
     data = pd.read_csv(csv_path)
 
-    # 2️⃣ Drop missing values
+    # Drop missing values
     data = data.dropna()
 
-    # 3️⃣ Define Features (X)
+    # Define Features (X)
     X = data[[
         "Renewable_electricity_output_GWh_[4.1.2_REN.ELECTRICITY.OUTPUT]",
         "Total_electricity_output_GWh_[4.1.1_TOTAL.ELECTRICITY.OUTPUT]",
         "Time"
     ]]
 
-    # 4️⃣ Define Target (y)
+    # Define Target (y)
     y = data[
         "Renewable_electricity_share_of_total_electricity_output_percent_[4.1_SHARE.RE.IN.ELECTRICITY]"
     ]
 
-    # 5️⃣ Train-Test Split
+    # Train-Test Split
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
     )
 
-    # 6️⃣ Train Model
+    # Train Model
     model = LinearRegression()
     model.fit(X_train, y_train)
 
-    # 7️⃣ Predict
+    # Predict
     predictions = model.predict(X_test)
 
-    # 8️⃣ Evaluate
+    # Evaluate
     r2 = r2_score(y_test, predictions)
 
     return model, r2, predictions, y_test
